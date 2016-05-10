@@ -327,6 +327,10 @@ list-style: none;
   background: #fbfbfe;
   text-decoration: none;
 }
+.post-outer-pc-index .index-date {
+  color: black;
+  margin-bottom: 10px;
+}
 .post-outer-pc-index .index-title {
 margin: 0 0 1em 0;
 }
@@ -1026,13 +1030,11 @@ user is not using shrink to fit then we expand the header.
                                             <h3 class='index-title entry-title' itemprop='name'>
                                               <data:post.title/>
                                             </h3>
-                                            <b:if cond='data:post.dateHeader'>
-                                              <h2 class='date-header'>
-                                                <span>
-                                                  <data:post.dateHeader/>
-                                                </span>
-                                              </h2>
-                                            </b:if>
+                                            <div class='index-date'>
+                                              <span>
+                                                <data:post.date/>
+                                              </span>
+                                            </div>
                                             <div class='index-contents'>
                                               <b:if cond='data:post.thumbnailUrl'>
                                                 <div class='index-thumbnail'>
