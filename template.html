@@ -317,9 +317,15 @@ list-style: none;
 }
 /* Posts at pc index
 ----------------------------------------------- */
-.post-outer-pc-index {
-background: #f9f9fb;
-margin-bottom: 1em;
+.post-outer-pc-index > a {
+  display: block;
+  background: #f9f9fb;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.post-outer-pc-index > a:hover {
+  background: #fbfbfe;
+  text-decoration: none;
 }
 .post-outer-pc-index .index-title {
 margin: 0 0 1em 0;
@@ -363,7 +369,8 @@ padding-bottom: $(main.padding.bottom);
 padding: 0 $(main.padding);
 }
 .main-inner .column-center-inner .section {
-margin: 0 $(main.section.margin);
+margin: 0;
+//margin: 0 $(main.section.margin);
 }
 .post {
 margin: 0 0 $(post.margin.bottom) 0;
@@ -982,29 +989,57 @@ user is not using shrink to fit then we expand the header.
                                   <div class='blog-posts hfeed'>
                                     <b:include data='top' name='status-message'/>
                                     <b:loop values='data:posts' var='post'>
-                                      <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
-                                        &lt;/div&gt;&lt;/div&gt;
-                                      </b:if>
-                                      <b:if cond='data:post.isDateStart'>
-                                        &lt;div class=&quot;date-outer&quot;&gt;
-                                      </b:if>
-                                      <b:if cond='data:post.dateHeader'>
-                                        <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
-                                      </b:if>
-                                      <b:if cond='data:post.isDateStart'>
-                                        &lt;div class=&quot;date-posts&quot;&gt;
-                                      </b:if>
-                                      <div class='post-outer'>
-                                        <b:include data='post' name='post'/>
-                                        <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
-                                      </div>
 
-                                      <!-- Ad -->
-                                      <b:if cond='data:post.includeAd'>
-                                        <div class='inline-ad'>
-                                          <data:adCode/>
+                                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                                        <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
+                                          &lt;/div&gt;&lt;/div&gt;
+                                        </b:if>
+                                        <b:if cond='data:post.isDateStart'>
+                                          &lt;div class=&quot;date-outer&quot;&gt;
+                                        </b:if>
+                                        <b:if cond='data:post.dateHeader'>
+                                          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+                                        </b:if>
+                                        <b:if cond='data:post.isDateStart'>
+                                          &lt;div class=&quot;date-posts&quot;&gt;
+                                        </b:if>
+                                        <div class='post-outer'>
+                                          <b:include data='post' name='post'/>
+                                          <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
+                                        </div>
+
+                                      <b:else/>
+                                        <div class='post-outer post-outer-pc-index'>
+                                          <a expr:href='data:post.url'>
+                                            <h3 class='index-title entry-title' itemprop='name'>
+                                              <data:post.title/>
+                                            </h3>
+                                            <b:if cond='data:post.dateHeader'>
+                                              <h2 class='date-header'>
+                                                <span>
+                                                  <data:post.dateHeader/>
+                                                </span>
+                                              </h2>
+                                            </b:if>
+                                            <div class='index-contents'>
+                                              <b:if cond='data:post.thumbnailUrl'>
+                                                <div class='index-thumbnail'>
+                                                  <div class='Image'>
+                                                    <img expr:src='data:post.thumbnailUrl'/>
+                                                  </div>
+                                                </div>
+                                              </b:if>
+                                              <div class='post-body'>
+                                                <b:if cond='data:post.snippet'>
+                                                  <data:post.snippet/>
+                                                </b:if>
+                                              </div>
+                                            </div>
+                                            <div style='clear: both;'/>
+                                          </a>
                                         </div>
                                       </b:if>
+
                                     </b:loop>
                                     <b:if cond='data:numPosts != 0'>
                                       &lt;/div&gt;&lt;/div&gt;
