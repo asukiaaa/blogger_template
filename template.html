@@ -1052,6 +1052,13 @@ user is not using shrink to fit then we expand the header.
                                         </div>
                                       </b:if>
 
+                                      <!-- Ad -->
+                                      <b:if cond='data:post.includeAd'>
+                                        <div class='inline-ad'>
+                                          <data:adCode/>
+                                        </div>
+                                      </b:if>
+
                                     </b:loop>
                                     <b:if cond='data:numPosts != 0'>
                                       &lt;/div&gt;&lt;/div&gt;
