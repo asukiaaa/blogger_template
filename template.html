@@ -7,7 +7,7 @@
 
     <meta content='summary' name='twitter:card'/>
     <meta content='@asukiaaa' name='twitter:site'/>
-    <meta content='興味があることを、試行錯誤しながら発信します。' name='twitter:text:description'/>
+    <meta content='興味のある情報を、試行錯誤しながら発信します。' name='twitter:text:description'/>
 
     <!-- OGP -->
     <!-- article -->
@@ -411,7 +411,10 @@ border: 1px solid $(image.border.color);
 box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 }
 .post-body img, .post-body .tr-caption-container {
-padding: $(image.border.large.size);
+//padding: $(image.border.large.size);
+}
+.post-body img {
+  max-width: 100%;
 }
 .post-body .tr-caption-container {
 color: $(image.text.color);
@@ -626,10 +629,10 @@ h3{
 font-size: 1.4em;
 }
 .post-body h2 {
-border-bottom: 3px solid #cdf4c6;
+border-bottom: 4px solid #9de291;
 }
 .post-body h3 {
-border-bottom: 1px solid #cdf4c6;
+border-bottom: 1px solid #9de291;
 }
 //.date-outer {
 //  padding: 1px 10px;
@@ -2220,27 +2223,6 @@ for good G+/FB snippeting. -->
         </div>
       </b:includable>
   </b:widget>
-  <b:widget id='LinkList1' locked='false' title='読んでもらいたい記事' type='LinkList' version='1' visible='true'>
-    <b:includable id='main'>
-        <b:if cond='data:title != &quot;&quot;'>
-          <h2>
-            <data:title/>
-          </h2>
-        </b:if>
-        <div class='widget-content'>
-          <ul>
-            <b:loop values='data:links' var='link'>
-              <li>
-                <a expr:href='data:link.target'>
-                  <data:link.name/>
-                </a>
-              </li>
-            </b:loop>
-          </ul>
-          <b:include name='quickedit'/>
-        </div>
-      </b:includable>
-  </b:widget>
   <b:widget id='Feed1' locked='false' title='最近の投稿' type='Feed' version='1' visible='true'>
     <b:includable id='main'>
         <h2>
@@ -2255,6 +2237,19 @@ for good G+/FB snippeting. -->
         </div>
         <b:include name='quickedit'/>
       </b:includable>
+  </b:widget>
+  <b:widget id='HTML1' locked='false' title='只今の発電量' type='HTML' visible='true'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
   </b:widget>
   <b:widget id='Label1' locked='false' title='ラベル' type='Label' version='1' visible='true'>
     <b:includable id='main'>
