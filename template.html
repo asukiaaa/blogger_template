@@ -1010,7 +1010,7 @@ user is not using shrink to fit then we expand the header.
                                     <b:include data='top' name='status-message'/>
                                     <b:loop values='data:posts' var='post'>
 
-                                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                                      <b:if cond='data:blog.pageType == &quot;item&quot; || data:blog.pageType == &quot;static_page&quot;'>
                                         <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
                                           &lt;/div&gt;&lt;/div&gt;
                                         </b:if>
