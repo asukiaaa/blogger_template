@@ -2223,6 +2223,7 @@ for good G+/FB snippeting. -->
         </div>
       </b:includable>
   </b:widget>
+  <!--googleoff: index-->
   <b:widget id='Feed1' locked='false' title='最近の投稿' type='Feed' version='1' visible='true'>
     <b:includable id='main'>
         <h2>
@@ -2238,7 +2239,8 @@ for good G+/FB snippeting. -->
         <b:include name='quickedit'/>
       </b:includable>
   </b:widget>
-  <b:widget id='HTML1' locked='false' title='只今の発電量' type='HTML' visible='true' mobile='yes'>
+  <!--googleon: index-->
+  <b:widget id='HTML1' locked='false' mobile='yes' title='只今の発電量' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2317,6 +2319,7 @@ for good G+/FB snippeting. -->
       </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'>
+  <!--googleoff: index-->
   <b:widget id='PopularPosts2' locked='false' mobile='yes' title='最近1ヶ月のアクセスが多い投稿' type='PopularPosts' version='1' visible='true'>
     <b:includable id='main'>
     <b:if cond='data:title != &quot;&quot;'>
@@ -2377,7 +2380,9 @@ for good G+/FB snippeting. -->
     </div>
   </b:includable>
   </b:widget>
+  <!--googleon: index-->
 </b:section-contents><b:section-contents id='footer-2-2'>
+  <!--googleoff: index-->
   <b:widget id='Feed2' locked='false' title='最近の投稿' type='Feed' version='1' visible='true'>
     <b:includable id='main'>
         <h2>
@@ -2393,6 +2398,7 @@ for good G+/FB snippeting. -->
         <b:include name='quickedit'/>
       </b:includable>
   </b:widget>
+  <!--googleon: index-->
   <b:widget id='BlogArchive1' locked='false' title='ブログ アーカイブ' type='BlogArchive' version='1' visible='true'>
     <b:includable id='main'>
         <b:if cond='data:title != &quot;&quot;'>
