@@ -2257,20 +2257,16 @@ for good G+/FB snippeting. -->
         </div>
       </b:includable>
   </b:widget>
-  <b:widget id='Feed1' locked='false' title='最近の投稿' type='Feed' version='1' visible='true'>
+  <b:widget id='Feed1' locked='false' title='最近の投稿' type='Feed' visible='true'>
     <b:includable id='main'>
-        <h2>
-          <data:title/>
-        </h2>
-        <div class='widget-content' expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
-          <span style='filter: alpha(25); opacity: 0.25;'>
-            <a expr:href='data:feedUrl'>
-              <data:loadingMsg/>
-            </a>
-          </span>
-        </div>
-        <b:include name='quickedit'/>
-      </b:includable>
+    <h2><data:title/></h2>
+    <div class='widget-content' expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
+      <span style='filter: alpha(25); opacity: 0.25;'>
+        <a expr:href='data:feedUrl'><data:loadingMsg/></a>
+      </span>
+    </div>
+    <b:include name='quickedit'/>
+  </b:includable>
   </b:widget>
   <b:widget id='HTML1' locked='false' mobile='yes' title='只今の発電量' type='HTML' visible='true'>
     <b:includable id='main'>
