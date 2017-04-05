@@ -774,7 +774,7 @@ margin-left: 32px;
     <script src='http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js' type='text/javascript'/>
 
     <!-- trigger syntax highlighter -->
-    <script type="text/javascript">
+    <script type='text/javascript'>
         SyntaxHighlighter.config.bloggerMode = true;
         SyntaxHighlighter.all()
     </script>
@@ -782,7 +782,7 @@ margin-left: 32px;
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
     <b:section class='navbar' id='navbar' maxwidgets='1' name='Navbar' showaddelement='no'>
-      <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar' version='1' visible='true'>
+      <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar' version='1'>
         <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -879,7 +879,16 @@ head.appendChild(script);
                   <div class='fauxborder-right header-fauxborder-right'/>
                   <div class='region-inner header-inner'>
                     <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='no'>
-                      <b:widget id='Header1' locked='true' title='試行錯誤な日々 (Header)' type='Header' version='1' visible='true'>
+                      <b:widget id='Header1' locked='true' title='試行錯誤な日々 (Header)' type='Header' version='1'>
+                        <b:widget-settings>
+                          <b:widget-setting name='displayUrl'/>
+                          <b:widget-setting name='displayHeight'>0</b:widget-setting>
+                          <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+                          <b:widget-setting name='useImage'>false</b:widget-setting>
+                          <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+                          <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+                          <b:widget-setting name='displayWidth'>0</b:widget-setting>
+                        </b:widget-settings>
                         <b:includable id='main'>
                           <b:if cond='data:useImage'>
                             <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
@@ -971,7 +980,11 @@ user is not using shrink to fit then we expand the header.
                 <div class='fauxborder-right tabs-fauxborder-right'/>
                 <div class='region-inner tabs-inner'>
                   <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'>
-                    <b:widget id='PageList1' locked='false' title='ページ' type='PageList' visible='true'>
+                    <b:widget id='PageList1' locked='false' title='ページ' type='PageList'>
+                      <b:widget-settings>
+                        <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'http://asukiaaa.blogspot.com/', 'title': 'ブログ', 'position': 0}, '3624545698134106595': {'href': 'http://asukiaaa.blogspot.com/p/powerplant.html', 'title': '太陽光発電記録', 'position': 1}, '1891272597074705009': {'href': 'http://asukiaaa.blogspot.com/p/work.html', 'title': '業務・講習・記事作成依頼', 'position': 2}}]]></b:widget-setting>
+                        <b:widget-setting name='homeTitle'>ブログ</b:widget-setting>
+                      </b:widget-settings>
                       <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div class='widget-content'>
@@ -1070,7 +1083,28 @@ user is not using shrink to fit then we expand the header.
                       <div class='column-center-outer'>
                         <div class='column-center-inner'>
                           <b:section class='main' id='main' name='Main' showaddelement='no'>
-                            <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog' version='1' visible='true'>
+                            <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog' version='1'>
+                              <b:widget-settings>
+                                <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+                                <b:widget-setting name='style.textcolor'>#6d6d6d</b:widget-setting>
+                                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                                <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                                <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+                                <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                                <b:widget-setting name='style.linkcolor'>#0000cc</b:widget-setting>
+                                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                                <b:widget-setting name='style.bgcolor'>#ebffed</b:widget-setting>
+                                <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                                <b:widget-setting name='showLabels'>false</b:widget-setting>
+                                <b:widget-setting name='showLocation'>false</b:widget-setting>
+                                <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                                <b:widget-setting name='postsPerAd'>4</b:widget-setting>
+                                <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                                <b:widget-setting name='style.bordercolor'>#a8dda0</b:widget-setting>
+                                <b:widget-setting name='showInlineAds'>true</b:widget-setting>
+                                <b:widget-setting name='showReactions'>false</b:widget-setting>
+                              </b:widget-settings>
                               <b:includable id='main' var='top'>
                                 <b:if cond='!data:mobile'>
                                   <!-- posts -->
@@ -2165,7 +2199,10 @@ for good G+/FB snippeting. -->
                     </macro:include>
                     <!-- outside of the include in order to lock Attribution widget -->
                     <b:section class='foot' id='footer-3' name='Footer' showaddelement='no'>
-                      <b:widget id='Attribution1' locked='true' title='' type='Attribution' visible='true'>
+                      <b:widget id='Attribution1' locked='true' title='' type='Attribution'>
+                        <b:widget-settings>
+                          <b:widget-setting name='copyright'/>
+                        </b:widget-settings>
                         <b:includable id='main'>
     <div class='widget-content' style='text-align: center;'>
       <b:if cond='data:attribution != &quot;&quot;'>
@@ -2238,7 +2275,11 @@ for good G+/FB snippeting. -->
   
   
 <b:section-contents id='sidebar-right-1'>
-  <b:widget id='Profile1' locked='false' title='自己紹介' type='Profile' version='1' visible='true'>
+  <b:widget id='Profile1' locked='false' title='自己紹介' type='Profile' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='showaboutme'>true</b:widget-setting>
+      <b:widget-setting name='showlocation'>false</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
         <b:if cond='data:title != &quot;&quot;'>
           <h2>
@@ -2293,7 +2334,14 @@ for good G+/FB snippeting. -->
         </div>
       </b:includable>
   </b:widget>
-  <b:widget id='Feed1' locked='false' title='最近の投稿' type='Feed' visible='true'>
+  <b:widget id='Feed1' locked='false' title='最近の投稿' type='Feed'>
+    <b:widget-settings>
+      <b:widget-setting name='feedUrl'>http://asukiaaa.blogspot.com/feeds/posts/default</b:widget-setting>
+      <b:widget-setting name='openLinksInNewWindow'>false</b:widget-setting>
+      <b:widget-setting name='numItemsShow'>5</b:widget-setting>
+      <b:widget-setting name='showItemDate'>false</b:widget-setting>
+      <b:widget-setting name='showItemAuthor'>false</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
     <h2><data:title/></h2>
     <div class='widget-content' expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
@@ -2304,7 +2352,15 @@ for good G+/FB snippeting. -->
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-  <b:widget id='HTML1' locked='false' mobile='yes' title='只今の発電量' type='HTML' visible='true'>
+  <b:widget id='HTML1' locked='false' mobile='yes' title='只今の発電量' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>&lt;iframe width=&quot;100%&quot; height=&quot;250&quot; style=&quot;border: 1px solid #cccccc;&quot; src=&quot;https://api.thingspeak.com/channels/124019/charts/4?width=auto&amp;yaxismin=0&amp;color=%236fd16f&quot;&gt;&lt;/iframe&gt;
+
+詳しいデータやシステムの作り方はこちら&#12290;&lt;br /&gt;
+&lt;a href=&quot;http://asukiaaa.blogspot.com/p/powerplant.html&quot;&gt;
+太陽光発電記録
+&lt;/a&gt;</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2317,7 +2373,14 @@ for good G+/FB snippeting. -->
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='Label1' locked='false' title='ラベル' type='Label' version='1' visible='true'>
+  <b:widget id='Label1' locked='false' title='ラベル' type='Label' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
+      <b:widget-setting name='display'>LIST</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'/>
+      <b:widget-setting name='showType'>ALL</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
         <b:if cond='data:title != &quot;&quot;'>
           <h2>
@@ -2374,7 +2437,16 @@ for good G+/FB snippeting. -->
         </div>
       </b:includable>
   </b:widget>
-  <b:widget id='AdSense1' locked='false' title='' type='AdSense' version='1' visible='true'>
+  <b:widget id='AdSense1' locked='false' title='' type='AdSense' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#19557f</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#000000</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
         <div class='widget-content'>
           <data:adCode/>
@@ -2383,7 +2455,13 @@ for good G+/FB snippeting. -->
       </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'>
-  <b:widget id='PopularPosts2' locked='false' mobile='yes' title='最近1ヶ月のアクセスが多い投稿' type='PopularPosts' version='1' visible='true'>
+  <b:widget id='PopularPosts2' locked='false' mobile='yes' title='最近1ヶ月のアクセスが多い投稿' type='PopularPosts' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+      <b:widget-setting name='showSnippets'>false</b:widget-setting>
+      <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
     <b:if cond='data:title != &quot;&quot;'>
       <h2>
@@ -2444,7 +2522,14 @@ for good G+/FB snippeting. -->
   </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-2-2'>
-  <b:widget id='Feed2' locked='false' title='最近の投稿' type='Feed' version='1' visible='true'>
+  <b:widget id='Feed2' locked='false' title='最近の投稿' type='Feed' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='feedUrl'>http://asukiaaa.blogspot.com/feeds/posts/default</b:widget-setting>
+      <b:widget-setting name='openLinksInNewWindow'>false</b:widget-setting>
+      <b:widget-setting name='numItemsShow'>5</b:widget-setting>
+      <b:widget-setting name='showItemDate'>false</b:widget-setting>
+      <b:widget-setting name='showItemAuthor'>false</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
         <h2>
           <data:title/>
@@ -2459,7 +2544,18 @@ for good G+/FB snippeting. -->
         <b:include name='quickedit'/>
       </b:includable>
   </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='ブログ アーカイブ' type='BlogArchive' version='1' visible='true'>
+  <b:widget id='BlogArchive1' locked='false' title='ブログ アーカイブ' type='BlogArchive' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+      <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+      <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+      <b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
+      <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+      <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+      <b:widget-setting name='chronological'>false</b:widget-setting>
+      <b:widget-setting name='showPosts'>true</b:widget-setting>
+      <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
         <b:if cond='data:title != &quot;&quot;'>
           <h2>
@@ -2550,7 +2646,7 @@ for good G+/FB snippeting. -->
         </a>
       </b:includable>
   </b:widget>
-  <b:widget id='ContactForm1' locked='false' mobile='yes' title='お問い合わせ' type='ContactForm' visible='true'>
+  <b:widget id='ContactForm1' locked='false' mobile='yes' title='お問い合わせ' type='ContactForm'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2 class='title'><data:title/></h2>
