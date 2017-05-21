@@ -169,8 +169,8 @@ default="transparent none no-repeat scroll top center" value="transparent url(//
 default="transparent none repeat scroll top left" value="transparent none repeat scroll top left"/>
 <Variable name="mobile.background.size" description="Mobile Background Size" type="string" default="auto" value="auto"/>
 <Variable name="mobile.button.color" description="Mobile Button Color" type="color" default="#ffffff"  value="#ffffff"/>
-<Variable name="startSide" description="Side where text starts in blog language" type="automatic" default="left" value="left"/>
-<Variable name="endSide" description="Side where text ends in blog language" type="automatic" default="right" value="right"/>
+<Variable name="startSide" description="Side where text starts in blog language" type="automatic" default="left"/>
+<Variable name="endSide" description="Side where text ends in blog language" type="automatic" default="right"/>
 */
 /* Content
 ----------------------------------------------- */
@@ -998,23 +998,20 @@ user is not using shrink to fit then we expand the header.
     <b:if cond='data:mobile'>
       <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
         <b:loop values='data:links' var='link'>
-          <b:if cond='data:link.isCurrentPage'>
-            <option expr:value='data:link.href' selected='selected'><data:link.title/></option>
-          <b:else/>
-            <option expr:value='data:link.href'><data:link.title/></option>
-          </b:if>
+          <option b:whitespace='remove' expr:value='data:link.href'>
+            <b:attr cond='data:link.isCurrentPage' name='selected' value='selected'/>
+            <data:link.title/>
+          </option>
         </b:loop>
       </select>
       <span class='pagelist-arrow'>&amp;#9660;</span>
-
     <b:else/>
       <ul>
         <b:loop values='data:links' var='link'>
-          <b:if cond='data:link.isCurrentPage'>
-            <li class='selected'><a expr:href='data:link.href'><data:link.title/></a></li>
-          <b:else/>
-            <li><a expr:href='data:link.href'><data:link.title/></a></li>
-          </b:if>
+          <li>
+            <b:class cond='data:link.isCurrentPage' name='selected'/>
+            <a expr:href='data:link.href'><data:link.title/></a>
+          </li>
         </b:loop>
       </ul>
     </b:if>
