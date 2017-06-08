@@ -37,9 +37,11 @@
     <meta content='ja_JP' property='og:locale'/>
     <!-- /OGP -->
 
-    <title>
-      <data:blog.pageTitle/>
-    </title>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+      <title><data:blog.pageTitle/></title>
+    <b:else/>
+      <title><data:blog.pageName/> : <data:blog.title/></title>
+    </b:if>
     <b:skin><![CDATA[
       
 /*
