@@ -2388,27 +2388,6 @@ for good G+/FB snippeting. -->
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-  <b:widget id='HTML1' locked='false' mobile='yes' title='只今の発電量' type='HTML'>
-    <b:widget-settings>
-      <b:widget-setting name='content'>&lt;iframe width=&quot;100%&quot; height=&quot;250&quot; style=&quot;border: 1px solid #cccccc;&quot; src=&quot;https://api.thingspeak.com/channels/124019/charts/4?width=auto&amp;yaxismin=0&amp;color=%236fd16f&quot;&gt;&lt;/iframe&gt;
-
-詳しいデータやシステムの作り方はこちら&#12290;&lt;br /&gt;
-&lt;a href=&quot;http://asukiaaa.blogspot.com/p/powerplant.html&quot;&gt;
-太陽光発電記録
-&lt;/a&gt;</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
   <b:widget id='Label1' locked='false' title='ラベル' type='Label' version='1'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
