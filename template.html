@@ -2469,7 +2469,26 @@ for good G+/FB snippeting. -->
         </div>
       </b:includable>
   </b:widget>
-</b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'>
+</b:section-contents><b:section-contents id='footer-1'>
+  <b:widget id='HTML1' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>&lt;script&gt;//&lt;![CDATA[
+window.Shisuh = (window.Shisuh) ? window.Shisuh : {};Shisuh.topUrl=&#39;https://asukiaaa.blogspot.jp&#39;;Shisuh.type=&#39;Blogger&#39;;Shisuh.alg=&#39;Related&#39;;Shisuh.showInsert=&#39;1&#39;;Shisuh.originalTemplateTypeWide=&#39;List&#39;;Shisuh.originalTemplateOffScrollWide=&#39;1&#39;;Shisuh.originalTemplateOffScrollCountWide=&#39;5&#39;;Shisuh.originalTemplateTypeNarrow=&#39;List&#39;;Shisuh.offScrollCount=&#39;5&#39;;Shisuh.offScroll=&#39;1&#39;;
+//]]&gt;&lt;/script&gt;&lt;script id=&quot;ssRelatedPageSdk&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;https://www.shisuh.com/djs/relatedPageFeed/&quot;&gt;&lt;/script&gt;</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+</b:section-contents><b:section-contents id='footer-2-1'>
   <b:widget id='PopularPosts2' locked='false' mobile='yes' title='最近1ヶ月のアクセスが多い投稿' type='PopularPosts' version='1'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
