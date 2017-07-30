@@ -2340,6 +2340,32 @@ for good G+/FB snippeting. -->
         </div>
       </b:includable>
   </b:widget>
+  <b:widget id='Image1' locked='false' title='物販してます' type='Image'>
+    <b:widget-settings>
+      <b:widget-setting name='displayUrl'>http://3.bp.blogspot.com/-2Nh6m8bVlYE/WXyOtGIklQI/AAAAAAAAOys/wKhjzSKUFkMugebNFUFa2Ii0UwA0f4WCQCK4BGAYYCw/s302/webshop_logo.png</b:widget-setting>
+      <b:widget-setting name='displayHeight'>124</b:widget-setting>
+      <b:widget-setting name='sectionWidth'>302</b:widget-setting>
+      <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
+      <b:widget-setting name='displayWidth'>302</b:widget-setting>
+      <b:widget-setting name='link'>https://trialstacks.base.ec/</b:widget-setting>
+      <b:widget-setting name='caption'>よかったら見てみてください&#12290;</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2><data:title/></h2>
+    </b:if>
+    <div class='widget-content'>
+      <b:tag cond='data:link' expr:href='data:link' name='a'>
+        <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_img&quot;' expr:src='data:sourceUrl' expr:width='data:width'/>
+      </b:tag>
+      <br/>
+      <b:if cond='data:caption'>
+        <span class='caption'><data:caption/></span>
+      </b:if>
+    </div>
+    <b:include name='quickedit'/>
+  </b:includable>
+  </b:widget>
   <b:widget id='BlogSearch1' locked='false' title='ブログ内検索' type='BlogSearch'>
     <b:includable id='main'>
     <!-- only display title if it's non-empty -->
