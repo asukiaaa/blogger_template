@@ -1000,7 +1000,7 @@ user is not using shrink to fit then we expand the header.
     <b:if cond='data:mobile'>
       <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
         <b:loop values='data:links' var='link'>
-          <option b:whitespace='remove' expr:value='data:link.href'>
+          <option expr:value='data:link.href'>
             <b:attr cond='data:link.isCurrentPage' name='selected' value='selected'/>
             <data:link.title/>
           </option>
@@ -2750,7 +2750,7 @@ window.Shisuh = (window.Shisuh) ? window.Shisuh : {};Shisuh.topUrl=&#39;https://
     <b:if cond='data:mobile'>
       <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
         <b:loop values='data:links' var='link'>
-          <option b:whitespace='remove' expr:value='data:link.href'>
+          <option expr:value='data:link.href'>
             <b:attr cond='data:link.isCurrentPage' name='selected' value='selected'/>
             <data:link.title/>
           </option>
