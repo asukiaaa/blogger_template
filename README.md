@@ -1,5 +1,9 @@
 # blogger_template
-A template used at http://asukiaaa.blogspot.jp/
+
+template | url
+-------- | ---
+[asukiaaa](./asukiaaa.html) | http://asukiaaa.blogspot.jp/
+[what-i-tried](./what-i-tried.html) | https://what-i-tried.blogspot.jp/2018/01/blog-post.html
 
 # References
 - [syntax highlighter](http://alexgorbatchev.com/SyntaxHighlighter/)
