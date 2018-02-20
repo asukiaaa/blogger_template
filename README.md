@@ -3,7 +3,7 @@
 template | url
 -------- | ---
 [asukiaaa](./asukiaaa.html) | http://asukiaaa.blogspot.jp/
-[what-i-tried](./what-i-tried.html) | https://what-i-tried.blogspot.jp/2018/01/blog-post.html
+[what-i-tried](./what-i-tried.html) | https://what-i-tried.blogspot.jp/
 
 # References
 - [syntax highlighter](http://alexgorbatchev.com/SyntaxHighlighter/)
