@@ -1008,7 +1008,7 @@ user is not using shrink to fit then we expand the header.
                   <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'>
                     <b:widget id='PageList1' locked='false' title='ページ' type='PageList'>
                       <b:widget-settings>
-                        <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'http://asukiaaa.blogspot.com/', 'title': 'ブログ', 'position': 0}, '3624545698134106595': {'href': 'http://asukiaaa.blogspot.com/p/powerplant.html', 'title': '太陽光発電記録', 'position': 1}, '1891272597074705009': {'href': 'http://asukiaaa.blogspot.com/p/work.html', 'title': '業務・記事作成依頼', 'position': 2}}]]></b:widget-setting>
+                        <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'http://asukiaaa.blogspot.com/', 'title': 'ブログ', 'position': 0}, '3624545698134106595': {'href': 'http://asukiaaa.blogspot.com/p/powerplant.html', 'title': '太陽光発電記録', 'position': 1}, '1891272597074705009': {'href': 'http://asukiaaa.blogspot.com/p/work.html', 'title': '仕事依頼・お問い合わせ', 'position': 2}}]]></b:widget-setting>
                         <b:widget-setting name='homeTitle'>ブログ</b:widget-setting>
                       </b:widget-settings>
                       <b:includable id='main'>
@@ -1039,7 +1039,25 @@ user is not using shrink to fit then we expand the header.
 </b:includable>
                     </b:widget>
                   </b:section>
-                  <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'/>
+                  <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'>
+                    <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+                      <b:widget-settings>
+                        <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                        <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+                        <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                        <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                        <b:widget-setting name='style.urlcolor'>#19557f</b:widget-setting>
+                        <b:widget-setting name='style.linkcolor'>#000000</b:widget-setting>
+                        <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                      </b:widget-settings>
+                      <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+                    </b:widget>
+                  </b:section>
                 </div>
               </div>
               <div class='tabs-cap-bottom cap-bottom'>
@@ -1108,24 +1126,31 @@ user is not using shrink to fit then we expand the header.
                           <b:section class='main' id='main' name='Main' showaddelement='no'>
                             <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog' version='1'>
                               <b:widget-settings>
+                                <b:widget-setting name='commentLabel'>comments</b:widget-setting>
+                                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                                <b:widget-setting name='authorLabel'>Posted by</b:widget-setting>
+                                <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
+                                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                                <b:widget-setting name='timestampLabel'>at</b:widget-setting>
+                                <b:widget-setting name='reactionsLabel'>Reactions:</b:widget-setting>
+                                <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                                <b:widget-setting name='showLocation'>false</b:widget-setting>
+                                <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                                <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                                <b:widget-setting name='style.bordercolor'>#a8dda0</b:widget-setting>
+                                <b:widget-setting name='backlinksLabel'>Links to this post</b:widget-setting>
                                 <b:widget-setting name='showDateHeader'>true</b:widget-setting>
                                 <b:widget-setting name='style.textcolor'>#6d6d6d</b:widget-setting>
-                                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
                                 <b:widget-setting name='showCommentLink'>true</b:widget-setting>
                                 <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
                                 <b:widget-setting name='showAuthor'>true</b:widget-setting>
                                 <b:widget-setting name='style.linkcolor'>#0000cc</b:widget-setting>
-                                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
                                 <b:widget-setting name='style.bgcolor'>#ebffed</b:widget-setting>
-                                <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
-                                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
                                 <b:widget-setting name='showLabels'>false</b:widget-setting>
-                                <b:widget-setting name='showLocation'>false</b:widget-setting>
-                                <b:widget-setting name='showTimestamp'>true</b:widget-setting>
-                                <b:widget-setting name='postsPerAd'>4</b:widget-setting>
+                                <b:widget-setting name='postLabelsLabel'>Labels:</b:widget-setting>
                                 <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-                                <b:widget-setting name='style.bordercolor'>#a8dda0</b:widget-setting>
-                                <b:widget-setting name='showInlineAds'>true</b:widget-setting>
+                                <b:widget-setting name='showInlineAds'>false</b:widget-setting>
                                 <b:widget-setting name='showReactions'>false</b:widget-setting>
                               </b:widget-settings>
                               <b:includable id='main' var='top'>
@@ -2717,7 +2742,7 @@ window.Shisuh = (window.Shisuh) ? window.Shisuh : {};Shisuh.topUrl=&#39;https://
   </b:widget>
   <b:widget id='PageList2' locked='false' title='' type='PageList'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'941929659522022980': {'href': 'https://asukiaaa.blogspot.com/p/privacy-policy.html', 'title': 'プライバシーポリシー', 'position': 0}}]]></b:widget-setting>
+      <b:widget-setting name='pageListJson'>{}</b:widget-setting>
       <b:widget-setting name='homeTitle'>ホーム</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
