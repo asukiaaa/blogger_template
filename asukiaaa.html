@@ -2415,6 +2415,22 @@ for good G+/FB snippeting. -->
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
+  <b:widget id='HTML3' locked='false' title='Twitter' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<a class="twitter-timeline" data-height="700" href="https://twitter.com/asukiaaa?ref_src=twsrc%5Etfw">Tweets by asukiaaa</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
   <b:widget id='Label1' locked='false' title='ラベル' type='Label' version='1'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
