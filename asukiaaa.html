@@ -5,45 +5,38 @@
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
 
-    <meta content='summary' name='twitter:card'/>
-    <meta content='@asukiaaa' name='twitter:site'/>
-    <meta content='興味のある情報を、試行錯誤しながら発信します。' name='twitter:text:description'/>
-
     <!-- OGP -->
     <!-- article -->
     <b:if cond='data:blog.pageType == &quot;item&quot;'>
       <meta content='article' property='og:type'/>
-      <meta expr:content='data:blog.pageName + &quot; | &quot; + data:blog.title' property='og:title'/>
-      <meta expr:content='&quot;http://bloggerspice.appspot.com/postimage/&quot; + data:blog.url' property='og:image'/>
+      <!-- <meta expr:content='data:blog.pageName + &quot; | &quot; + data:blog.title' property='og:title'/> -->
+      <!-- <meta expr:content='&quot;http://bloggerspice.appspot.com/postimage/&quot; + data:blog.url' property='og:image'/> -->
     </b:if>
     <!-- home -->
     <b:if cond='data:blog.pageType == &quot;index&quot;'>
       <meta content='blog' property='og:type'/>
-      <meta expr:content='data:blog.pageTitle' property='og:title'/>
+      <!-- <meta expr:content='data:blog.pageTitle' property='og:title'/> -->
     </b:if>
     <!-- archive -->
     <b:if cond='data:blog.pageType == &quot;archive&quot;'>
       <meta content='article' property='og:type'/>
-      <meta expr:content='data:blog.pageTitle' property='og:title'/>
+      <!-- <meta expr:content='data:blog.pageTitle' property='og:title'/> -->
     </b:if>
     <!-- page -->
     <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
       <meta content='article' property='og:type'/>
-      <meta expr:content='data:blog.pageTitle' property='og:title'/>
+      <!-- <meta expr:content='data:blog.pageTitle' property='og:title'/> -->
     </b:if>
     <!-- all -->
-    <meta expr:content='data:blog.url' property='og:url'/>
+    <!-- <meta expr:content='data:blog.url' property='og:url'/> -->
     <meta expr:content='data:blog.title' property='og:site_name'/>
     <meta content='ja_JP' property='og:locale'/>
     <!-- /OGP -->
 
-    <b:if cond='data:blog.pageType == &quot;index&quot;'>
-      <title><data:blog.pageTitle/></title>
-    <b:else/>
-      <title><data:blog.pageName/> : <data:blog.title/></title>
-    </b:if>
+    <meta content='summary' name='twitter:card'/>
+    <meta content='@asukiaaa' name='twitter:site'/>
+
     <b:skin><![CDATA[
-      
 /*
 -----------------------------------------------
 Blogger Template Style
